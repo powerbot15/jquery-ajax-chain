@@ -1,7 +1,7 @@
 jquery-ajax-chain
 =================
 
-Multiple ajax calls chaining
+Multiple ajax calls chaining with `jQuery.ajax()`
 
       var counter = 0,
           requestsCount = 100,
