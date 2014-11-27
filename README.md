@@ -1,7 +1,10 @@
 jquery-ajax-chain
 =================
 
-Multiple ajax calls chaining with `jQuery.ajax()`
+Multiple ajax requests chaining with `jQuery.ajax()`
+-------------------------------------------------
+
+This is one of possible solutions for chaining ajax requests one by one. So each next request will start only when response of the previous request processed
 
       var counter = 0,
           requestsCount = 100,
@@ -10,9 +13,9 @@ Multiple ajax calls chaining with `jQuery.ajax()`
         $.get(url)
           .done(function(response){
             counter++;
-            chainedResponses.push(response);
+            chainedResponses.push(response); //current response saved
             if(counter < requestsCount){ //
-                chain('/page' + counter);
+                chain('/page' + counter); // now recursion !
             }
             else{
               console.dir(chainedResponses); //all data accepted from all calls now proceed it
