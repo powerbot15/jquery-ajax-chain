@@ -31,4 +31,4 @@ This is one of possible solutions for chaining ajax requests one by one. So each
               console.dir(chainedResponses); //all data accepted from all calls now proceed it
             }
           })
-      })('/page0');
+      })('/page0');     //the first request url
